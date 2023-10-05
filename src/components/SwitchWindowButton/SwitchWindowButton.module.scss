@@ -1,0 +1,38 @@
+.Main {
+    min-width: 30vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .All {
+        width: 80%;
+        height: 80%;
+        padding: 0% 1%;
+        overflow: hidden;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5vh;
+        background-color: red;
+        color: yellow;
+        border-radius: 1.5vh;
+        white-space: pre;
+    }
+    .DisActive:hover {
+        cursor: pointer;
+        background-color: yellow;
+        color: red;
+        width: 95%; 
+        height: 95%;
+        font-size: 3vh;
+    }
+    
+    .Active {
+        background-color: yellow;
+        color: red;
+        width: 95%; 
+        height: 95%;
+        font-size: 3vh;
+    }
+}
