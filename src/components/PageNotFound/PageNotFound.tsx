@@ -4,8 +4,8 @@ type AlertProps = {
 };
 const Main = ({ }: AlertProps): JSX.Element => {
     return (
-        <div className={style.Main}>
-            Three
+        <div >
+            PageNotFound
         </div>
     );
 }

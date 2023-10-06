@@ -1,0 +1,28 @@
+.Main {
+    height: 100%;
+    display: flex;
+    margin: 2vh;
+
+    .Table {
+        height: 100%;
+        width: 80%;
+
+        .Img {
+            background-color: var(--c9);
+            border: 1vh solid var(--c9);
+            height: 100%;
+            overflow: scroll;
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    .About {
+        font-size: 2vh;
+        height: 100%;
+        width: 20%;
+        background-color: var(--c10);
+        color: var(--c11);
+        padding: 1vh;
+    }
+}
