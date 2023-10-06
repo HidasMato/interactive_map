@@ -4,8 +4,8 @@
     margin: 2vh;
 
     .Table {
-        height: 100%;
-        width: 80%;
+        height: 96%;
+        width: 75%;
 
         .Img {
             background-color: var(--c9);
@@ -16,13 +16,27 @@
             position: relative;
         }
     }
-
     .About {
-        font-size: 2vh;
-        height: 100%;
-        width: 20%;
-        background-color: var(--c10);
-        color: var(--c11);
-        padding: 1vh;
+        height: 96%;
+        width: 25%;
+        .SizeMode {
+            width: 90%;
+            height: 8%;
+            background-color: var(--c2);
+            color: var(--c3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            margin: 0.5vh;
+        }
+        .SizeMode2 {
+            width: 95%;
+            height: 11%;
+            background-color: var(--c4);
+        }
+        .SizeMode:hover{
+            cursor: pointer;
+        }
     }
 }

@@ -1,0 +1,32 @@
+.Main {
+    background-color: var(--c4);
+    color: var(--c1);
+    border-radius: 2vh;
+    margin: 1vh;
+    position: relative;
+    height: 8vh;
+    width: 25vw;
+    .Book {
+        height: 100%;
+        width: 100%;
+    }
+    .Title {
+        font-size: 17px;
+        position: absolute;
+        height: 100%;
+        width: 72%;
+        overflow: hidden;
+        display: flex;
+        justify-content: start;
+        padding-left: 10px;
+        align-items: center;
+        white-space: pre;
+    }
+    .Text {
+        padding-top: 1vh;
+    }
+}
+.Main:hover {
+    margin-left: 40px;
+    cursor: pointer;
+}

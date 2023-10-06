@@ -2,55 +2,81 @@ import React, { useEffect, useState } from 'react';
 import style from './Сountries.module.scss';
 import Map from '../../images/map.png'
 import Country from '../Country/Country';
+import About from '../About/About';
 type AlertProps = {
 };
 const Main = ({ }: AlertProps): JSX.Element => {
-    const [myText, setMyText] = useState('Тут информация о чем-то')
+    const [text, setText] = useState('Выберите метку на карте для отображения информации')
+    const [title, setTitle] = useState('')
+    const [mode, setMode] = useState(5);
+    useEffect(() => {
+        document.getElementById('Countries')?.style.setProperty("--mode", String(mode));
+    },[mode])
     return (
-        <div className={style.Main}>
+        <div className={style.Main} id='Countries'>
             <div className={style.Table}>
                 <div className={style.Img}>
-                    <img src={Map} alt="" />
+                <img src={Map} alt="" style={{ width: `${7680 / mode}px` }} />
                     <Country
-                        myText={"Маас Атер"}
-                        text={"Маас Атер. Страна"} setText={setMyText}
-                        x={600} y={800} width={1000} height={200} />
+                        title={"Маас Атер"}
+                        text={"Маас Атер. Одна из шести стран-вассалов Кирандийской империи. Близь этого острова обитает большое количество дракочерепах. Из разумных гуманоидов здесь живут драконорожденные, людоящеры, юаньти, торглы и прочие твари с чешуей. Также здесь обитает большое количество драконов и находится много порталов в царство драконов. Правят этой землей, как ни странно драконорожденные. Они делятся на пять великих кланов, каждый принадлежит своему цвету. Половина континента отводится цветным драконорожденным, которые служат злу и хотят подогнать власть под себя однако они находятся в стадии холодной войны уже долгое время. Драконий принц так и не смог примерить их окончательно, старые предрассудки все еще держатся. Известен тем, что был родиной великого императора, создавшего Кирандийскую имерию."}
+                        x={600} y={800} width={1000} height={200}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                     <Country
-                        myText={"Теократия Авгур"}
-                        text={"Теократия Авгур. Страна"} setText={setMyText}
-                        x={1400} y={2300} width={800} height={500} />
+                        title={"Теократия Авгур"}
+                        text={"Страна"}
+                        x={1400} y={2300} width={800} height={500}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                     <Country
-                        myText={"Гринвуд"}
-                        text={"Гринвуд. Страна"} setText={setMyText}
-                        x={3000} y={1800} width={800} height={400} />
+                        title={"Гринвуд"}
+                        text={"Одна из шести стран-вассалов Кирандийской империи."}
+                        x={3000} y={1800} width={800} height={400}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                     <Country
-                        myText={"Кирандия"}
-                        text={"Кирандия. Страна"} setText={setMyText}
-                        x={4300} y={1400} width={800} height={400} />
+                        title={"Кирандия"}
+                        text={"Страна-сюзерен (столица) Кирандийской империи."}
+                        x={4300} y={1400} width={800} height={400}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                     <Country
-                        myText={"Хассамир"}
-                        text={"Хассамир. Страна"} setText={setMyText}
-                        x={3800} y={2600} width={800} height={400} />
+                        title={"Хассамир"}
+                        text={"Одна из шести стран-вассалов Кирандийской империи."}
+                        x={3800} y={2600} width={800} height={400}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                     <Country
-                        myText={"Калденор"}
-                        text={"Калденор. Страна"} setText={setMyText}
-                        x={4700} y={2800} width={800} height={400} />
+                        title={"Калденор"}
+                        text={"Страна"}
+                        x={4700} y={2800} width={800} height={400}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                     <Country
-                        myText={"Грантурдир"}
-                        text={"Грантурдир. Страна"} setText={setMyText}
-                        x={5400} y={1800} width={800} height={400} />
+                        title={"Грантурдир"}
+                        text={"Одна из шести стран-вассалов Кирандийской империи."}
+                        x={5400} y={1800} width={800} height={400}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                     <Country
-                        myText={"Старград"}
-                        text={"Старград. Страна"} setText={setMyText}
-                        x={5800} y={900} width={800} height={400} />
+                        title={"Мечеград"}
+                        text={"Одна из шести стран-вассалов Кирандийской империи."}
+                        x={6400} y={1800} width={800} height={400}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                     <Country
-                        myText={"Земли зеленокожих"}
-                        text={"Земли зеленокожих. Страна"} setText={setMyText}
-                        x={6200} y={2500} width={1000} height={600} />
+                        title={"Старград"}
+                        text={"Одна из шести стран-вассалов Кирандийской империи."}
+                        x={5800} y={900} width={800} height={400}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
+                    <Country
+                        title={"Земли зеленокожих"}
+                        text={"Страна"}
+                        x={6200} y={2500} width={1000} height={600}
+                        mode={mode} setText={setText} setTitle={setTitle}/>
                 </div>
             </div>
             <div className={style.About}>
-                {myText}
+                <About text={text} title={title} />
+                <button className={style.SizeMode} onClick={() => {
+                    if (mode < 6) setMode(mode + 1);
+                }}>Отдалить</button>
+                <button className={style.SizeMode + ' ' + style.SizeMode2} onClick={() => {
+                    if (mode > 1) setMode(mode - 1);
+                }}>Приблизить</button>
             </div>
         </div>
     );

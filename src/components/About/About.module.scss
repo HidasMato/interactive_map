@@ -1,0 +1,16 @@
+.About {
+    height: 80%;
+    width: 100%;
+    background-color: var(--c10);
+    padding: 2vh;
+    color: var(--c11);
+    overflow-y: scroll;
+    .Title {
+        font-size: 3vh;
+        padding-bottom: 1vh;
+    }
+    .Text {
+        text-align: justify;
+        font-size: 2vh;
+    }
+}

@@ -4,7 +4,7 @@ type AlertProps = {
 };
 const Main = ({ }: AlertProps): JSX.Element => {
     return (
-        <div >
+        <div className={style.Main}>
             FameBoard
         </div>
     );
